@@ -1,9 +1,11 @@
 # BioBERT: a pre-trained biomedical language representation model for biomedical text mining
 
+
+
 ## Why is it on demand?
 
 1. Increasing need for biomedical information.
-2. Using general corpora is not effective when the field is specified.
+2. Using general models is not effective when the field is specified.
 
 ## What makes it hard?
 
@@ -26,4 +28,14 @@
 
 1. Pre-training BioBERT
    - As biomedical information contains domain specific terms, training Word2Vec on biomedical corpora leads to better results. 
+   - Initialized with BERT pre-trained on Wikipedia and BooksCorpus, BioBERT used biomedical corpora such as PubMed and PMC.
+2. Improving performance of BioBERT
+   - Use of WordPiece tokenization: a solution for OOV issues.
+   - Named Entity Recognition: helpful for recognizing domain specific terms. Built upon LSTMs. Learned from WordPiece embeddings (not from PubMed or PMC)
+   - Relation Extraction: Classification of relations between named entities. 
+   - Question Answering
+
+## Results
+
+
 
